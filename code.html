@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Gentleman's Cut - Premium Barbershop</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1325",
+                        "primary-dark": "#c10e1d", 
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221012",
+                        "surface-dark": "#2d1619", // Slightly lighter than background-dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(34, 16, 18, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, #221012 5%, rgba(34, 16, 18, 0.6) 40%, rgba(34, 16, 18, 0.3) 100%);
+        }
+        .text-outline-primary {
+             -webkit-text-stroke: 1px #ec1325;
+             color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-display antialiased selection:bg-primary selection:text-white">
+<!-- Navigation -->
+<nav class="fixed w-full z-50 glass-nav border-b border-white/5 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex-shrink-0 flex items-center gap-2">
+<span class="material-icons-outlined text-primary text-3xl">content_cut</span>
+<span class="text-xl font-bold uppercase tracking-widest text-white">GENTLEMAN'S</span>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-8">
+<a class="text-white hover:text-primary transition-colors px-3 py-2 text-sm font-medium uppercase tracking-wider" href="#hero">Home</a>
+<a class="text-gray-300 hover:text-primary transition-colors px-3 py-2 text-sm font-medium uppercase tracking-wider" href="#services">Services</a>
+<a class="text-gray-300 hover:text-primary transition-colors px-3 py-2 text-sm font-medium uppercase tracking-wider" href="#about">About</a>
+<a class="text-gray-300 hover:text-primary transition-colors px-3 py-2 text-sm font-medium uppercase tracking-wider" href="#contact">Contact</a>
+</div>
+</div>
+<div class="hidden md:block">
+<button class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded text-sm font-bold uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-lg shadow-primary/20">
+                        Book Now
+                    </button>
+</div>
+<div class="-mr-2 flex md:hidden">
+<button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none" type="button">
+<span class="sr-only">Open main menu</span>
+<span class="material-icons-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden" id="hero">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Close up of barber cutting hair in dark moody lighting" class="w-full h-full object-cover opacity-80" data-alt="Close up of barber cutting hair in dark moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBesY5bsRTkpCofA4FmsgIJGJRq2GpXzGzNO7wyywQeMf6xavgK3UVDenpp-EhBLw0m2uLn_NAiT1QBVtl-lAJ3-I0PPyuvHUHPl5wS9xTA3QO0aMnm6R3quaUZ7mqs9N6Rtg6iplG3txw1BO53f7QlOBce-axA77kBz2jhnrK9Fii9SLhOXallFlDl1sF3uvlFz5oDZLzTZFIzLyzj8MhBh8B_fCInQ5y55QI1gKv1qI3MPpyEUMZ63vp2SvX4kt-DKFzuVspTJtA"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+<div class="mb-4 flex items-center justify-center gap-3 animate-fade-in-up">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="uppercase tracking-[0.3em] text-sm text-gray-300 font-light">Est. 2024</span>
+<div class="h-[1px] w-12 bg-primary"></div>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 uppercase leading-tight tracking-tight">
+                The Gentleman's <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Cut</span>
+</h1>
+<p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Experience premium grooming in the heart of the city. Where tradition meets modern precision.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded text-base font-bold uppercase tracking-widest transition-all transform hover:-translate-y-1 shadow-xl shadow-primary/20 w-full sm:w-auto">
+                    Book Appointment
+                </button>
+<button class="border border-white/20 hover:border-white hover:bg-white/5 text-white px-8 py-4 rounded text-base font-bold uppercase tracking-widest transition-all w-full sm:w-auto">
+                    View Services
+                </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+<span class="material-icons-outlined text-white/50 text-3xl">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- About / Philosophy Section -->
+<section class="py-24 bg-background-dark relative overflow-hidden" id="about">
+<!-- Abstract Background Pattern -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary rounded-tl-xl"></div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-primary rounded-br-xl"></div>
+<img alt="Vintage barber chair in a dark room" class="relative rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-[4/3]" data-alt="Vintage barber chair in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVTgM3PTp854pXHldlXJPhQ_1K4NIqACBjYHIE63q4FHpUdCJNfPIBqo6cilyzWVYXSiOWkICVUAL3hR4OOhqQXPCp8bIgRUH8nPqURP7r16Mm9-KIkRycyrYJL_FzfzWLz85RqgTRtUDRCTgXP9B4G75phHCcuKHJDttDmULO5KLIKjDvj-lrPqm0Db78tXrPWHVFYWz0pcvx3klDwGjvkoKmI5B9pwaaNPyg4-1UW7sz30AuTceQ2JebxDZilq1j0AfWo1Hcm28"/>
+</div>
+<div>
+<h2 class="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-4">Our Philosophy</h2>
+<h3 class="text-4xl md:text-5xl font-bold text-white mb-6 uppercase">Precision. Style. Tradition.</h3>
+<p class="text-gray-400 mb-6 text-lg leading-relaxed font-light">
+                        We believe a haircut is more than just a routine; it's a ritual. Our master barbers combine old-school techniques with modern styling to deliver a look that is uniquely yours. 
+                    </p>
+<p class="text-gray-400 mb-8 text-lg leading-relaxed font-light">
+                        Step into our lounge, accept a complimentary beverage, and leave the noise of the outside world behind.
+                    </p>
+<div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+<div>
+<span class="block text-3xl font-bold text-white mb-1">2000+</span>
+<span class="text-sm text-gray-500 uppercase tracking-wider">Clients Served</span>
+</div>
+<div>
+<span class="block text-3xl font-bold text-white mb-1">15+</span>
+<span class="text-sm text-gray-500 uppercase tracking-wider">Years Experience</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-dark relative" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-3">Menu</h2>
+<h3 class="text-4xl md:text-5xl font-bold text-white uppercase">Our Services</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="group relative bg-background-dark p-8 rounded-lg border border-white/5 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons-outlined text-6xl text-white">content_cut</span>
+</div>
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons-outlined text-2xl">content_cut</span>
+</div>
+<h4 class="text-2xl font-bold text-white mb-2 uppercase">Haircut</h4>
+<p class="text-gray-400 mb-6 font-light">Precision cut tailored to your head shape and style preferences. Includes wash and styling.</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-6">
+<span class="text-2xl font-bold text-primary">$45</span>
+<button class="text-white text-sm uppercase tracking-wider hover:text-primary transition-colors flex items-center gap-1 group/btn">
+                            Select <span class="material-icons-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group relative bg-background-dark p-8 rounded-lg border border-white/5 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons-outlined text-6xl text-white">face</span>
+</div>
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons-outlined text-2xl">face</span>
+</div>
+<h4 class="text-2xl font-bold text-white mb-2 uppercase">Beard Trim</h4>
+<p class="text-gray-400 mb-6 font-light">Sculpting and shaping of the beard. Includes hot towel treatment and razor finish.</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-6">
+<span class="text-2xl font-bold text-primary">$30</span>
+<button class="text-white text-sm uppercase tracking-wider hover:text-primary transition-colors flex items-center gap-1 group/btn">
+                            Select <span class="material-icons-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group relative bg-background-dark p-8 rounded-lg border border-white/5 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons-outlined text-6xl text-white">spa</span>
+</div>
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons-outlined text-2xl">spa</span>
+</div>
+<h4 class="text-2xl font-bold text-white mb-2 uppercase">Royal Shave</h4>
+<p class="text-gray-400 mb-6 font-light">The ultimate relaxation. Hot steam, pre-shave oil, straight razor shave, and cooling mask.</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-6">
+<span class="text-2xl font-bold text-primary">$55</span>
+<button class="text-white text-sm uppercase tracking-wider hover:text-primary transition-colors flex items-center gap-1 group/btn">
+                            Select <span class="material-icons-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-20 bg-background-dark border-t border-white/5">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<span class="material-icons-outlined text-primary text-6xl mb-6 opacity-80">format_quote</span>
+<blockquote class="text-2xl md:text-3xl font-light text-white italic leading-relaxed mb-8">
+                "Not just a haircut, but an experience. The attention to detail is unmatched in the city. I wouldn't trust anyone else."
+            </blockquote>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full bg-gray-700 overflow-hidden">
+<img alt="Customer portrait" class="w-full h-full object-cover" data-alt="Customer portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_WmHEBI09FDuBSJ8gc7CDFDQh1Xch_CiR0z3livdWb8Ib6-XBQpdGmhrIDI943UPI4WJPToz1vZK18veboqrqpHeI3XOlJj0NykBjsSsocb1RRerybX9XaPL3hIDauRShtIpPdVqOxcZ8rAOz335xuePYVqKs7JgXUhAWzCjYZ3EBntVLpB3JUpF3T9gSVJg3aG1_RJmxLhyQ2TPja3CmTyco0LiU7vTAoysYKeMNRx261734fO_Zu8GzYpPYHbCr-TzPcyJypwY"/>
+</div>
+<div class="text-left">
+<div class="text-white font-bold uppercase tracking-wider text-sm">James Peterson</div>
+<div class="text-primary text-xs uppercase tracking-wide">Loyal Customer</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Banner -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Dark texture of shaving tools" class="w-full h-full object-cover opacity-20" data-alt="Dark texture of shaving tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8CEbKzAIxfsWTa7iz3fosXgIUJxNEI_-97IzKNhY44_kMXAjx9WNyF0_tOJ0Wj2MC4Y69gWxUmFniAEcQf-LWK2Cj_ptBPTaYyNCsfaQd9dFzpqXD6vy5gX9wRfqq0HmrF7Gk0aJLwcxF6IkcMmOzqvJW1Rc4QHauNwxsOQEo31CSKEvgw8ZqprlDF6GLPxxdv5yHUFC8rviAzA4qPHrzpdBfZzijuelIgdoeeLagMBOfU-EvtB0CMKAQ3nMvHn4fqTBodLT6ZYw"/>
+<div class="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-8 uppercase tracking-tight">Ready for your upgrade?</h2>
+<button class="bg-white text-primary hover:bg-gray-100 px-10 py-4 rounded text-lg font-bold uppercase tracking-widest transition-all transform hover:-translate-y-1 shadow-xl">
+                Book Your Seat
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-dark border-t border-white/5 pt-16 pb-8" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Brand -->
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-icons-outlined text-primary text-2xl">content_cut</span>
+<span class="text-lg font-bold uppercase tracking-widest text-white">GENTLEMAN'S CUT</span>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed mb-6 font-light">
+                        Elevating men's grooming through precision, luxury, and an unwavering commitment to quality.
+                    </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons-outlined text-sm">facebook</span>
+</a>
+<a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons-outlined text-sm">camera_alt</span> <!-- Instagram proxy -->
+</a>
+<a class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons-outlined text-sm">alternate_email</span> <!-- Twitter proxy -->
+</a>
+</div>
+</div>
+<!-- Hours -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6">Opening Hours</h4>
+<ul class="space-y-3 text-sm text-gray-400 font-light">
+<li class="flex justify-between border-b border-white/5 pb-2">
+<span>Mon - Fri</span>
+<span class="text-white">10:00 AM - 8:00 PM</span>
+</li>
+<li class="flex justify-between border-b border-white/5 pb-2">
+<span>Saturday</span>
+<span class="text-white">09:00 AM - 6:00 PM</span>
+</li>
+<li class="flex justify-between pb-2">
+<span>Sunday</span>
+<span class="text-primary">Closed</span>
+</li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6">Contact Us</h4>
+<ul class="space-y-4 text-sm text-gray-400 font-light">
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-primary text-lg mt-0.5">location_on</span>
+<span>123 Grooming Blvd, Suite 101<br/>Metropolis, NY 10012</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons-outlined text-primary text-lg">phone</span>
+<span>(555) 123-4567</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons-outlined text-primary text-lg">email</span>
+<span>book@gentlemanscut.com</span>
+</li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6">Newsletter</h4>
+<p class="text-gray-400 text-sm mb-4 font-light">Subscribe for exclusive offers and grooming tips.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-background-dark border border-white/10 text-white px-4 py-3 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm transition-colors placeholder-gray-600" placeholder="Email Address" type="email"/>
+<button class="bg-white/10 hover:bg-primary text-white px-4 py-3 rounded text-sm font-bold uppercase tracking-wider transition-colors" type="button">
+                            Subscribe
+                        </button>
+</form>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-600 text-xs text-center md:text-left">
+                    © 2024 The Gentleman's Cut. All rights reserved.
+                </p>
+<div class="flex gap-6 text-xs text-gray-500">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

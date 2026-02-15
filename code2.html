@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Barbershop Landing Page Variant 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1325",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221012",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .service-card:hover .service-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221012; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3f1d20; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ec1325; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- Navigation -->
+<nav class="fixed w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex-shrink-0 flex items-center gap-2">
+<span class="material-icons text-primary text-3xl">content_cut</span>
+<span class="font-bold text-2xl tracking-tighter uppercase">Blade<span class="text-primary">&amp;</span>Bone</span>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-8">
+<a class="text-primary font-medium px-3 py-2 rounded-md text-sm uppercase tracking-wide" href="#">Home</a>
+<a class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors" href="#services">Services</a>
+<a class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors" href="#barbers">Barbers</a>
+<a class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase tracking-wide transition-colors" href="#location">Location</a>
+</div>
+</div>
+<div>
+<a class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-2 rounded text-sm font-medium uppercase tracking-wider transition-all duration-300" href="#">
+                        Book Now
+                    </a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Split Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20">
+<!-- Background texture overlay -->
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-0">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[calc(100vh-5rem)]">
+<!-- Left Column: Content -->
+<div class="flex flex-col justify-center space-y-8 z-10">
+<div class="inline-flex items-center space-x-2 text-primary/80 font-semibold tracking-widest uppercase text-sm">
+<span class="w-8 h-[2px] bg-primary"></span>
+<span>Established 2024</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] uppercase tracking-tight">
+                        Refine Your <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-600">Ritual.</span>
+</h1>
+<p class="text-lg text-gray-400 max-w-lg leading-relaxed border-l-4 border-primary/30 pl-6">
+                        Where traditional craftsmanship meets modern precision. Experience the premium cut that defines your character.
+                    </p>
+<div class="flex items-center gap-6 pt-4">
+<div class="flex -space-x-4">
+<img alt="Customer avatar" class="w-12 h-12 rounded-full border-2 border-background-dark object-cover" data-alt="Close up of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLC1ZFo3BnbWoFDWXmgXhyaQIKkGTQEQpT9crlm9uaKgsaA3z4S7wh9VhB5QD670hpBI_8XxvOmPBcG70eNiTW02CvoiPfrtFP4rkSdyNqUQtHEWpY-tk7LQtGA8ssNbOdBRXrKh0P51TmqPe04JjNWLcMKyNee6RGV4t-gD7YVnGFWnqPajAijLq6d1S-FaSpbyXhq07sXu3-wur1fm_eRNLp8mVcmDZ1FKJNqt2l67Ij-vnSZlJOPXb9nGhDNYpqx9xqNePOmM"/>
+<img alt="Customer avatar" class="w-12 h-12 rounded-full border-2 border-background-dark object-cover" data-alt="Portrait of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBThLuf6H_sXmkdngwg9w0rthWY_EnRWc-UIfVP-Z3HuwigybPH8DqLznz9pQlxJuNKsCFo9IWPT_n3kK_SFrlx5JtDQpkRHGkgL7XHnVjqmODFlV04LBzXecDKOAAXSxsfHqpHLOIMucbM7qK7M_HbtVOXAPpGwU317QGYDCe5l2ue469djCUSknYzqYhqUWgRfWctN3W0g9mdTL3GAjM19sX1XFNjZhNtoipaNY-s2P5MoQPYnYoj9EhzvHgL7f8w-McHNj9Y18c"/>
+<img alt="Customer avatar" class="w-12 h-12 rounded-full border-2 border-background-dark object-cover" data-alt="Man with beard smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgS4UXHWrGbIEVd8iyQDeiByXZ1d1S66_iqhJil873_X1jZh-m5qyISD7I5bCmrWt9B-SkKkh5jLaYbKMb28p0RYeXBGX4Ww-tdJ_WZMTBqyLxu7VUunzCBppPSr4eMFKEVLMntDGgbUwkLHCO0H-4c1mmvTkAU1mFLy9cmm5JyjysrAC0nbr7o1b2TiCLKzmaJCljAUqrMVwRo-EzDbReAYaIdzgla0Opcfdy_RqV6uT0ogUwLW-rqajUwE4a6eJ0Q-qizeZeTNA"/>
+<div class="w-12 h-12 rounded-full border-2 border-background-dark bg-primary flex items-center justify-center text-white text-xs font-bold">
+                                500+
+                            </div>
+</div>
+<div class="flex flex-col">
+<div class="flex text-primary text-sm">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+<span class="text-sm text-gray-400 font-medium">Satisfied Gentlemen</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Booking Card -->
+<div class="relative z-10 lg:pl-10">
+<!-- Decorative blurred background behind card -->
+<div class="absolute -inset-4 bg-primary/20 rounded-xl blur-2xl opacity-50"></div>
+<div class="relative bg-zinc-900 border border-zinc-800 p-8 rounded-xl shadow-2xl">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-icons text-8xl text-white">calendar_today</span>
+</div>
+<h3 class="text-2xl font-bold mb-6 text-white uppercase tracking-wide">Quick Appointment</h3>
+<form class="space-y-5">
+<div>
+<label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Service Type</label>
+<select class="w-full bg-zinc-800 border-zinc-700 text-white rounded focus:ring-primary focus:border-primary py-3 px-4 transition-colors hover:bg-zinc-750">
+<option>Signature Haircut</option>
+<option>Beard Trim &amp; Shape</option>
+<option>Full Service Combo</option>
+<option>Hot Towel Shave</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Date</label>
+<input class="w-full bg-zinc-800 border-zinc-700 text-white rounded focus:ring-primary focus:border-primary py-3 px-4" type="date"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Time</label>
+<select class="w-full bg-zinc-800 border-zinc-700 text-white rounded focus:ring-primary focus:border-primary py-3 px-4">
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>12:00 PM</option>
+<option>01:00 PM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Barber (Optional)</label>
+<select class="w-full bg-zinc-800 border-zinc-700 text-white rounded focus:ring-primary focus:border-primary py-3 px-4">
+<option>Any Available</option>
+<option>James "The Blade"</option>
+<option>Marcus</option>
+<option>Sarah</option>
+</select>
+</div>
+<button class="w-full bg-primary hover:bg-red-600 text-white font-bold py-4 rounded text-lg uppercase tracking-wider shadow-lg shadow-primary/25 transition-all duration-300 transform hover:scale-[1.02] mt-4 flex items-center justify-center gap-2" type="button">
+<span>Confirm Booking</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-gray-500 mt-4">
+                                No credit card required for booking. <br/>Cancellation policy applies.
+                            </p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-24 bg-zinc-900/50 relative" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Our Menu</span>
+<h2 class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">Expert Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-[800px] md:h-[600px]">
+<!-- Service 1: Hair -->
+<div class="group relative rounded-lg overflow-hidden h-full service-card cursor-pointer">
+<img alt="Barber cutting hair with precision" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Close up of barber cutting hair with scissors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDot05SYxZhminZEGNEEc7Fzc3jjDZ5PAFt91Ku1j_fSlriQigoP18WdkwtoRE_hKftblbR3nygrTE1VuKLvf3OZnrVWNctsDBi0os72fjMRpjFQABvFTIztt0-VKum65jYXzZHe8SLQwes7jzBPH35gUNprkAAyb0BevoOCvwSiJ2Qrh4WlLJJL7rIbWv1aaK3dq_amF1-uyP2o1CvkpU4wIxxF4149I0c56lZtgixRU5Se8FNR5xmryQHSYg3a573v8YWHfUXm1M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 z-20 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+<h3 class="text-3xl font-bold text-white uppercase mb-2">Haircuts</h3>
+<div class="w-12 h-1 bg-primary mb-4 transition-all duration-500 group-hover:w-full"></div>
+<div class="service-overlay opacity-0 transform translate-y-4 transition-all duration-500 ease-out">
+<p class="text-gray-300 mb-6 text-sm">Precision cuts tailored to your head shape and style preferences. Includes wash and style.</p>
+<ul class="space-y-3 mb-6">
+<li class="flex justify-between text-sm border-b border-white/10 pb-1">
+<span class="text-white">Standard Cut</span>
+<span class="text-primary font-bold">$35</span>
+</li>
+<li class="flex justify-between text-sm border-b border-white/10 pb-1">
+<span class="text-white">Skin Fade</span>
+<span class="text-primary font-bold">$45</span>
+</li>
+</ul>
+<button class="text-white text-sm font-bold uppercase tracking-wider flex items-center gap-2 hover:text-primary transition-colors">
+                                Select Service <span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Service 2: Beard -->
+<div class="group relative rounded-lg overflow-hidden h-full service-card cursor-pointer">
+<img alt="Man getting beard trim" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Man receiving a beard trim with electric razor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9y6L_zGoEsFsgeEyt1pkzbcrVKKHHkUkwFURmn6eikcViOhcWMd3AltnLSPDW6HXI5pzBAk7oG5B8WglxvkcXgvLxL2_WII1YFDRXt7k7ULz9eWtnww8hqpHmkHuFB2pMXGJmGhHZe6Q8ZW3AQjSjsZ2EI-Qq24NLgGsRhTwbj0Lw07fun92l0iDRXfdvWmR57SXlJ2uorEJUh26Mwyih-3ueUFkedxjT2ZfbfWwG6n-cYEx6ECXsEh5hh9TcB3Sur9wW2KAj8Bs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 z-20 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+<h3 class="text-3xl font-bold text-white uppercase mb-2">Beard &amp; Shave</h3>
+<div class="w-12 h-1 bg-primary mb-4 transition-all duration-500 group-hover:w-full"></div>
+<div class="service-overlay opacity-0 transform translate-y-4 transition-all duration-500 ease-out">
+<p class="text-gray-300 mb-6 text-sm">Keep it sharp or take it all off. Hot towel treatment included with all shave services.</p>
+<ul class="space-y-3 mb-6">
+<li class="flex justify-between text-sm border-b border-white/10 pb-1">
+<span class="text-white">Beard Sculpt</span>
+<span class="text-primary font-bold">$25</span>
+</li>
+<li class="flex justify-between text-sm border-b border-white/10 pb-1">
+<span class="text-white">Hot Towel Shave</span>
+<span class="text-primary font-bold">$40</span>
+</li>
+</ul>
+<button class="text-white text-sm font-bold uppercase tracking-wider flex items-center gap-2 hover:text-primary transition-colors">
+                                Select Service <span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Service 3: Spa/Package -->
+<div class="group relative rounded-lg overflow-hidden h-full service-card cursor-pointer">
+<img alt="Barber tools and spa products" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Assortment of grooming products and towels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnAKfs9k9qMYxVPsl4GceXn_ewRLeWNvdj-vdU-Nn_Z9V9uD5IhYXRNaDKHMTbrQWnZxSnE7x83ksuTPb3VilPBr3q95tqSNdZHdThkYFxx-v3TZWZ3iwi3lLHYQU3A4LRy7VBSU_2YIDT9inddbGKzmPYGFjOQbya9iwW2TvdQKDZqyKxNPV2XnhTOMAwl9mPEjxDbNa3jftQj1Au2PzDtEgHWh0YCEncEGdJ4R-o0lkrKLFwmuu4is-P39ius3LipW7o-mNGGx0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 z-20 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+<h3 class="text-3xl font-bold text-white uppercase mb-2">The Works</h3>
+<div class="w-12 h-1 bg-primary mb-4 transition-all duration-500 group-hover:w-full"></div>
+<div class="service-overlay opacity-0 transform translate-y-4 transition-all duration-500 ease-out">
+<p class="text-gray-300 mb-6 text-sm">The ultimate grooming experience. Haircut, shave, facial massage, and styling.</p>
+<ul class="space-y-3 mb-6">
+<li class="flex justify-between text-sm border-b border-white/10 pb-1">
+<span class="text-white">Full Grooming</span>
+<span class="text-primary font-bold">$75</span>
+</li>
+<li class="flex justify-between text-sm border-b border-white/10 pb-1">
+<span class="text-white">VIP Package</span>
+<span class="text-primary font-bold">$100</span>
+</li>
+</ul>
+<button class="text-white text-sm font-bold uppercase tracking-wider flex items-center gap-2 hover:text-primary transition-colors">
+                                Select Service <span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet the Barbers -->
+<section class="py-24 bg-background-dark" id="barbers">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">The Crew</span>
+<h2 class="text-4xl font-bold text-white uppercase tracking-tight">Master Barbers</h2>
+</div>
+<div class="mt-6 md:mt-0">
+<a class="text-gray-400 hover:text-white transition-colors text-sm uppercase tracking-wide flex items-center gap-2" href="#">
+                        View All Staff <span class="material-icons text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Barber 1 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-[3/4]">
+<img alt="Barber portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of a serious barber looking at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Z4__w7HN-RhjOmnXq2X-5ej0xrNlk8eCehrg_LpVrK6nU7ZXVLZO3SAnFLCLQUJIbi45tb-sR1dlUS5bx4oLqOjTVgPLWhtBKI3BGODkeNAlnhtWAB1e13TS9a19L9EQzPS0-tb63-9BLd69hTYliv1RW-yv3VpcRgK9KFDg0fYM9aR06XPCICtbmzS3n6I0VIaLqdi4ILnYF_bGSz6PJv-Wpo4AVSQ8daCofi7K06hWiaz_gleOmqvHmdzsHKCwWbuaEIxDkyo"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 py-2 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<p class="text-white text-xs font-bold uppercase tracking-wider text-center">Specialty: Fades</p>
+</div>
+</div>
+<h4 class="text-xl font-bold text-white uppercase">James</h4>
+<p class="text-primary text-sm font-medium">Master Barber</p>
+</div>
+<!-- Barber 2 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-[3/4]">
+<img alt="Barber portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of a male barber with tattoos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr9ZAfyuoQ4tex7_L2vXPjza4ZFPBviOmU5klE07yDJatjPNfdy9zhhqCB0vxWBkOxPVBauPL7PqxgTsTTPuRTJptyb0gWpl_SKNClizwFleK_yktty-m9CLzoP5UH-9KIbn8DnELSP4LgR_uHStIY5U6rN6vCPeQVajrlsDMn9V8Wup-P20_ZCcpEl16naLolGaIXmoCvoIpiuJHKwVF89zk50fvmU6LRvANZSes7iTKwXIvpe3vY9xtoXmtGm9BUb189-YDiHDo"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 py-2 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<p class="text-white text-xs font-bold uppercase tracking-wider text-center">Specialty: Beards</p>
+</div>
+</div>
+<h4 class="text-xl font-bold text-white uppercase">Marcus</h4>
+<p class="text-primary text-sm font-medium">Senior Stylist</p>
+</div>
+<!-- Barber 3 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-[3/4]">
+<img alt="Barber portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of a female barber smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-AJ_MTT2pUBqDMktcSPuCzVr5C0pkcYMXV0B7kVN6NKFGIj_XX3S6qHeV0U6SN8eER9uspvBZh2aikcafm6GiaHI3j54wgoVvOE2M8NtiBep4FT9rkFF6R3sqFZw80dMxuZWTxxlX66-rIgWoxrwxplBiwgs3jEWphSH5-MQh6kqDS5RUWw3krzMEeQWDwJp4XIF1vUyr18cujzgCd6f9kRBLVfhtJwyHIxXqD21SZ0lO0y_HrOcn64kvXqHT801gUV5ZExFmT3M"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 py-2 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<p class="text-white text-xs font-bold uppercase tracking-wider text-center">Specialty: Scissor Cuts</p>
+</div>
+</div>
+<h4 class="text-xl font-bold text-white uppercase">Sarah</h4>
+<p class="text-primary text-sm font-medium">Stylist</p>
+</div>
+<!-- Join Us Card -->
+<div class="border border-dashed border-zinc-700 rounded-lg flex flex-col items-center justify-center p-8 text-center h-full aspect-[3/4] hover:border-primary transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-zinc-800 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+<span class="material-icons text-white text-3xl">add</span>
+</div>
+<h4 class="text-xl font-bold text-white uppercase mb-2">Join The Team</h4>
+<p class="text-gray-400 text-sm mb-4">Are you a master of the craft?</p>
+<span class="text-primary text-sm font-bold uppercase tracking-wider">Apply Now</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-zinc-950 pt-20 pb-10 border-t border-zinc-900" id="location">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24 mb-16">
+<!-- Brand & Newsletter -->
+<div class="space-y-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-icons text-primary text-2xl">content_cut</span>
+<span class="font-bold text-xl tracking-tighter uppercase text-white">Blade<span class="text-primary">&amp;</span>Bone</span>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Redefining the modern barbershop experience. Premium cuts, expert shaves, and an atmosphere that speaks for itself.
+                    </p>
+<div class="pt-4">
+<label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Join the inner circle</label>
+<div class="flex">
+<input class="bg-zinc-900 border-zinc-800 text-white text-sm rounded-l focus:ring-primary focus:border-primary w-full" placeholder="Your email address" type="email"/>
+<button class="bg-primary hover:bg-red-600 text-white px-4 rounded-r transition-colors">
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Info & Hours -->
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6 text-sm">Visit Us</h4>
+<address class="text-gray-400 text-sm not-italic space-y-2">
+<p>1284 Innovation Blvd</p>
+<p>Design District, NY 10012</p>
+<p class="pt-2 text-white hover:text-primary transition-colors cursor-pointer">+1 (555) 019-2834</p>
+<p class="text-white hover:text-primary transition-colors cursor-pointer">book@bladebone.com</p>
+</address>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6 text-sm">Hours</h4>
+<ul class="text-gray-400 text-sm space-y-2">
+<li class="flex justify-between"><span class="w-12">Mon</span> <span>Closed</span></li>
+<li class="flex justify-between"><span class="w-12 text-white">Tue</span> <span class="text-white">10am - 8pm</span></li>
+<li class="flex justify-between"><span class="w-12">Wed</span> <span>10am - 8pm</span></li>
+<li class="flex justify-between"><span class="w-12">Thu</span> <span>10am - 9pm</span></li>
+<li class="flex justify-between"><span class="w-12">Fri</span> <span>10am - 9pm</span></li>
+<li class="flex justify-between"><span class="w-12">Sat</span> <span>9am - 6pm</span></li>
+<li class="flex justify-between"><span class="w-12">Sun</span> <span>10am - 4pm</span></li>
+</ul>
+</div>
+</div>
+<!-- Map Image -->
+<div class="h-full min-h-[200px] rounded-lg overflow-hidden relative">
+<img alt="Map of New York City location" class="absolute inset-0 w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-300" data-alt="Abstract map view of city streets" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUDDw89h7E9d0Bu6-xPEPxzjPclB_YdEhg5k5rHwIzvC6ve8lx_BrNbnnga2L-RIb7S9yHHbTI8VbURiQwWW63H-YhNnnO2K09bhx7ortQZsI3cvOlK-bmTQmM49hxxtPBq9ITwG1OGezZbhIiSmJ-gRKcgpGiJjxs8HasvtUhPvhbLj8EcLzqDQt1oOwlOM5grGiKOn5qk_fDoQQbEJbuyj9eGxj9yCZkKxmwH60t_NGTkrKRva26qa9r-eXjAWfDa3hVnUo2qXg"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-8 h-8 rounded-full bg-primary/20 animate-ping absolute"></div>
+<div class="w-3 h-3 rounded-full bg-primary relative shadow-[0_0_10px_rgba(236,19,37,0.8)]"></div>
+</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-xs">© 2024 Blade &amp; Bone Barbershop. All rights reserved.</p>
+<div class="flex space-x-6">
+<a class="text-gray-500 hover:text-primary transition-colors" href="#"><i class="material-icons text-lg">facebook</i></a>
+<a class="text-gray-500 hover:text-primary transition-colors" href="#"><i class="material-icons text-lg">camera_alt</i></a> <!-- Instagram equivalent -->
+<a class="text-gray-500 hover:text-primary transition-colors" href="#"><i class="material-icons text-lg">alternate_email</i></a> <!-- Twitter/X equivalent -->
+</div>
+</div>
+</div>
+</footer>
+</body></html>
